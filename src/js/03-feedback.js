@@ -20,10 +20,10 @@ function onFormInput(e) {
 function fillUserForm() {
   const storage = getUserData(STORAGE_KEY);
   if (storage && Object.values(storage) !== []) {
-    formRef.email.value = storage.email;
-    formRef.message.value = storage.message;
-    formData.email = storage.email;
-    formData.message = storage.message;
+    formRef.email.value = storage.email ? storage.email : '';
+    formRef.message.value = storage.message ? storage.email : '';
+    formData.email = storage.email ? storage.email : '';
+    formData.message = storage.message ? storage.email : '';
   }
 }
 
